@@ -14,9 +14,9 @@ app.use(cookieParser());
 
 // view engine
 app.set('view engine', 'ejs');
-
-mongoose.connect(process.env.MONGO_URI)
-  .then((result) => app.listen(process.env.PORT))
+const db='mongodb+srv://kobenkhaoua:takeiteasy@mernapp.gxh9rto.mongodb.net/?retryWrites=true&w=majority&appName=Mernapp';
+mongoose.connect(db)
+  .then((result) => app.listen(3000))
   .catch((err) => console.log(err));
 
 // routes
